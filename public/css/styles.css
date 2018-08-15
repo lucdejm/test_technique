@@ -1,0 +1,351 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+/* ===============================
+            GENERAL
+=============================== */
+
+header {
+	text-align: center;
+}
+
+header .container {
+	background-color: #fc0;
+}
+
+header img {
+	width: 50%;
+	margin: 0.5rem;
+}
+
+nav a {
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #262626;
+	transition: color .5s;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	display: inline-block;
+}
+
+nav a:hover, nav a:focus {
+	color: #fff;
+}
+
+h1, h2, h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #262626;
+	margin: 0.5rem 0 1rem 0rem;
+}
+
+h3 {
+	font-size: 0.8rem;
+	font-weight: bold;
+	padding: 0.5rem;
+}
+
+p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8rem;
+}
+
+/* ===============================
+            RECHERCHE
+=============================== */
+.search {
+	text-align: center;
+}
+
+.search form {
+	margin: 2rem 0;
+}
+
+input[type="search"] {
+	padding: 0.5rem 8rem 0.5rem 0.5rem;
+	font-size: 0.8rem;
+}
+
+input[type="submit"] {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8rem;
+	font-weight: bold;
+	padding: 0.6rem 1rem;
+	background-color: #fc0;
+	color: #262626;
+	border: none;
+	transition-duration: 0.3s;
+}
+
+input[type="submit"]:hover {
+	background-color: #eabb00;
+}
+
+
+/* ===============================
+            FOOTER
+=============================== */
+
+footer {
+	background-color: #262626;
+}
+
+
+.footermodule h3 {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.mentions {
+	padding: 2rem;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+.mentions li {
+	padding: 0.5rem 0;
+}
+
+.mention a:link, .mentions a:visited {
+	color: #fff;
+}
+
+/*------- Reseaux Sociaux -------*/
+
+.socialnetworks ul, .onmobile ul {	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+.socialnetworks li, .onmobile li {
+	display: inline-block;
+	padding: 1rem 0.5rem;
+}
+
+.socialnetworks a, .onmobile a {
+	display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/icons_plateform_small.png");
+}
+
+footer .facebook {
+    background-position: 0px 0px;
+}
+
+footer .twitter {
+    background-position: -43px 0px;
+}
+
+footer .instagram {
+    background-position: -86px 0px;
+}
+
+footer .google {
+    background-position: -130px 0px;
+}
+
+footer .email {
+    background-position: -173px 0px;
+}
+
+footer .facebook:hover {
+    background-position: 0px -43px;
+}
+
+footer .twitter:hover {
+    background-position: -43px -43px;
+}
+
+footer .instagram:hover {
+    background-position: -86px -43px;
+}
+
+footer .google:hover {
+    background-position: -130px -43px;
+}
+
+footer .email:hover {
+    background-position: -173px -43px;
+}
+
+
+/*------- Plaformes Mobiles -------*/
+
+footer .apple {
+    background-position: -218px 0px;
+}
+
+footer .android {
+    background-position: -259px 0px;
+}
+
+footer .windows {
+    background-position: -307px 0px;
+}
+
+footer .apple:hover {
+    background-position: -218px -43px;
+}
+
+footer .android:hover {
+    background-position: -259px -43px;
+}
+
+footer .windows:hover {
+    background-position: -307px -43px;
+}
+
+/* ===============================
+            Media queries
+=============================== */
+
+@media screen and (min-width: 980px) {
+	.container {
+		margin: auto;
+		width: 80%;
+	}
+
+	header .container {
+		display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header nav {
+		display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+	}
+
+
+	header nav ul {
+		display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+		justify-content: space-between;
+	}
+
+	nav a {
+		padding: 3vh;
+		margin: 1rem;
+	}
+
+	footer {
+		margin: auto;
+	}
+
+	.footermodule {
+		display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+		justify-content: space-between;
+	}
+
+	.module {
+		flex-grow: 1;
+		border-right: 1px #b3b3b3 solid;
+		padding: 1rem;
+	}
+
+	.module:last-child {
+		border-right: none;
+	}
+
+	.mentions ul {
+		display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+		justify-content: center;
+	}
+
+	.mentions li {
+		border-right: 1px #fff solid;
+		padding: 0 0.5rem;
+	}
+
+	.mentions li:last-child {
+		border-right: none;
+	}
+
+}
