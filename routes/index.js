@@ -14,6 +14,11 @@ router.get("/randommovies", function(req, res){
   res.json(data);
 })
 
+router.get("/randommovies/:id", function(req, res) {
+    let id = Number(req.params.id);
+    res.json(data[id]);
+})
+
 
 
 
