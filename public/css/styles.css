@@ -109,7 +109,7 @@ h3 {
 	padding: 0.5rem;
 }
 
-p{
+p, .randommovie span {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 0.8rem;
 }
@@ -143,6 +143,32 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
 	background-color: #eabb00;
+}
+
+/* ===============================
+        MOVIE RANDOM
+=============================== */
+
+.randommovie li {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+}
+
+.randommovie img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	padding-bottom: 0.5rem;
+}
+
+.randommovie span {
+	padding-bottom: 1rem;
+	text-align: center;
 }
 
 
@@ -306,6 +332,17 @@ footer .windows:hover {
 		padding: 3vh;
 		margin: 1rem;
 	}
+
+	.randommovie ul {
+		display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
 
 	footer {
 		margin: auto;
