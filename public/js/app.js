@@ -3,34 +3,32 @@
 /* ===============================
             FETCH
 =============================== */
-
-const randomMovie = document.querySelector(".randommovie");
-
-
-function fetchData(url){
-    return fetch(url)
-        .then(checkStatus)
-        .then(respond => respond.json())
-        .catch(error => console.log("There is an error", error))
-}
+const ul = document.getElementById("movielist");
+const url = "http://localhost:3000/randommovies";
 
 /* fetch functions */
+fetch(url)
+    .then((resp) => resp.json())
+    .then(function(data) {
+        let movies = data;
+        return movies.map(function(movie) { 
+        let li = createNode('li'),
+            img = createNode('img'),
+            span = createNode('span');
+        img.src = movie.movie_cover; 
+        span.innerHTML = `De ${movie.director}`;
+        append(li, img);
+        append(li, span);
+        append(ul, li);
+        })
+    })
 
-fetchData("routerandom")
-    .then(data => generateMovieCard(data.message))
 
 /* helper functions */
-function checkStatus (response) {
-    if (response.ok) {
-        return Promise.resolve(response);
-    } else {
-        return Promise.reject(new Error(response.statusText));
-    }
+function createNode(element) {
+        return document.createElement(element);
 }
 
-function generateMovieCard(data){
-    const html = "
-        <img src="'${dir}'"> </img>
-    ";
-    randomMovie.innerhtml = html;
+function append(parent, el) {
+    return parent.appendChild(el);
 }
