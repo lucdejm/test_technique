@@ -9,14 +9,14 @@ $(".slider").each(function() {
     const delay = 4000;
 })
 */
-const $GROUP = $(".slide-group");
-const $SLIDES = $(".slide");
-const buttonArray = [];
-const currentIndex = 0;
-const TIMEOUT = 0;
+var $GROUP = $(".slide-group");
+var $SLIDES = $(".slide");
+let buttonArray = [];
+let currentIndex = 0;
+let timeout = 0;
 const delay = 4000;
 
-console.log(TIMEOUT);
+console.log(timeout);
 console.log(delay);
 console.log($GROUP);
 console.log($SLIDES);
@@ -25,6 +25,7 @@ console.log($SLIDES);
 function move (newIndex) {
     let animateLeft = 0;
     let slideLeft= 0;
+
     advance (); // quand une slide est appelée, appeler la fonction advance
     
     console.log(slideLeft);
@@ -48,12 +49,14 @@ function move (newIndex) {
 
     console.log(slideLeft);
     console.log(animateLeft);   
+    console.log("New index :", newIndex)
+    console.log("slides : ", $SLIDES);
 
     // positionner la slide ciblée en fonction de la position dans l'array
-    $SLIDE.eq(newIndex).css( {left: slideLeft, display: "block"} );
+    $SLIDES.eq(newIndex).css( {left: slideLeft, display: "block"} );
     $GROUP.animate({left: animateLeft}, function() {
-        $SLIDE.eq(currentIndex).css( {display: none} );
-        $SLIDE.eq(newIndex).css ( {left: 0} );
+        $SLIDES.eq(currentIndex).css( {display: "none"} );
+        $SLIDES.eq(newIndex).css ( {left: 0} );
         $GROUP.css( {left: 0} );
         currentIndex = newIndex;
     });
@@ -61,7 +64,7 @@ function move (newIndex) {
 
 /* ---- function advance to shuffle to nex slide with timer ---- */
 function advance() {
-    clearTimeout(TIMEOUT); // remettre le timer à zéro
+    // clearTimeout(timeout); // remettre le timer à zéro
     // activer la fonction tout les x secondes (x=const delay)
     let timeout = setTimeout(function(){  //    const timeout = setTimeout(function(){
         if(currentIndex < ($SLIDES.length - 1)) { // si ce n'est pas la dernière slide
