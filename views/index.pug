@@ -3,20 +3,19 @@ extends layout.pug
 block content
     include includes/header.pug
     .wrap
-        .container.diaporama
-        // fin div <diapo>
+        .container.slider
         .container
-        .search
-            form(action='http://xx.php')
-            input#search(type='search', name='searchBar', placeholder='Chercher un film')
-            input#buttonsearch(type='submit', value='Rechercher')
-        // fin div <container search>
-    // fin div <container boxoffice>
-    .container
-        h1 Découvrez des films
-        .randommovie
-        ul#movielist
-        // fin div <random movie>
+            .search
+                form(action='http://xx.php')
+                input#search(type='search', name='searchBar', placeholder='Chercher un film')
+                input#buttonsearch(type='submit', value='Rechercher')
+            // fin div <container search>
+        // fin div <container boxoffice>
+        .container
+            h1 Découvrez des films
+            .randommovie
+                ul#movielist
+                // fin div <random movie>
     // fin div <container random movie>
     // fin div <wrap>
     include includes/footer.pug
