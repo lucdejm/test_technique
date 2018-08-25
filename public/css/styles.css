@@ -121,7 +121,7 @@ p, .randommovie span {
 .slide-viewer {
 	position: relative;
 	overflow: hidden;
-	height: 300px;
+	height: 400px;
 }
 
 .slide-group {
@@ -135,6 +135,28 @@ p, .randommovie span {
 	height: 100%;
 	display: none;
 	position: absolute;
+}
+
+.slide figure {
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.slide figcaption {
+	position: absolute;
+	left: 0px;
+	color: #fff;
+	background-color: rgba(38, 38, 38, 0.7);
+	width: 350px;
+	height: 400px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	padding: 0 1rem;
+	align-self: center;
 }
 
 .slide:first-child {
