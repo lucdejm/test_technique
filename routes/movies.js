@@ -13,10 +13,6 @@ router.get("/", function(req, res) {
     res.json(data);
 });
 
-router.get("/movieslist", function(req, res) {
-    
-    res.json(data);
-});
 
 
 

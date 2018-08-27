@@ -11,15 +11,15 @@ for(i=0; i<movieCards; i++) {
     fetch(urlMovie)
         .then(function(response) { return response.json(); })
         .then(function(data) {
-        let movieCard = data;
-        console.log("type de donné de movieCard : ", typeof movieCard);
-        let li = createNode("li"),
-            figure = createNode("figure"),
-            img = createNode("img"),
-            figcaption = createNode("figcaption")
-        img.src = movieCard.movie_cover;
-        console.log("source img: ", img.src);
-        figcaption.innerHTML = "De " + movieCard.director;
+            let movieCard = data;
+            console.log("type de donné de movieCard : ", typeof movieCard);
+            let li = createNode("li"),
+                figure = createNode("figure"),
+                img = createNode("img"),
+                figcaption = createNode("figcaption")
+            img.src = movieCard.movie_cover;
+            console.log("source img: ", img.src);
+            figcaption.innerHTML = "De " + movieCard.director;
         append(li, figure);
         append(figure, img);
         append(figure, figcaption);
