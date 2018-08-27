@@ -5,7 +5,7 @@ const movieCards = 8;
 /* fetch functions */
 
 for(i=0; i<movieCards; i++) {
-    let id = randomId(50); // la variable doit correspondre au max id en base
+    let id = randomId(40); // la variable doit correspondre au max id en base
     console.log(id);
     let urlMovie = "http://localhost:3000/movies/"+id;
     fetch(urlMovie)
