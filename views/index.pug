@@ -6,19 +6,14 @@ block content
         .container.slider
             include includes/sliderMain.pug
         .container
-            .search
-                form(action='http://xx.php')
-                input#search(type='search', name='searchBar', placeholder='Chercher un film')
-                input#buttonsearch(type='submit', value='Rechercher')
-            // fin div <container search>
-        // fin div <container boxoffice>
+            include includes/search.pug
         .container
             include includes/randomMovie.pug
-    // fin div <container random movie>
     // fin div <wrap>
     include includes/footer.pug
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    // script(src='js/app.js')
+    script(src='js/plugin/typeahead.bundle.js')
+    script(src='js/app.js')
     script(src='js/slider.js')
     script(src='js/randommovie.js')
-    script(src='js/vendor/jquery.typeahead.min.js')
+

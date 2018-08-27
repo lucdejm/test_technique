@@ -13,14 +13,11 @@ router.get("/", function(req, res) {
     res.json(data);
 });
 
-
-/*
-router.get("/randommovie", function(req, res){
-  let id = Number(req.params.id);
-  let numberOfMovies = data[id].length;
-  let movieId = Math.floor(Math.random() * numberOfMovies);
-  res.json(data[movieId]);
+router.get("/movieslist", function(req, res) {
+    
+    res.json(data);
 });
-*/
+
+
 
 module.exports = router;

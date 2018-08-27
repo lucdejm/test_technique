@@ -1,14 +1,3 @@
-/* 
-$(".slider").each(function() {
-    // const $this = $(this);
-    const $group = $(".slide-group");  // $this.find(".slide-group");
-    const $slides = $(".slide"); // $this.find(".slide");
-    const buttonArray = [];
-    const currentIndex = 0;
-    const timeout = 0;
-    const delay = 4000;
-})
-*/
 var $GROUP = $(".slide-group");
 var $SLIDES = $(".slide");
 let buttonArray = [];
