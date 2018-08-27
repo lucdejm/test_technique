@@ -9,12 +9,12 @@ function fetchList (type) {
         .then(function(response) { return response.json(); })
         .then(function(data) {
             let list = [];
-            console.log("data = ", data);
-            console.log("type de data: ", typeof data);
+            //console.log("data = ", data);
+            //console.log("type de data: ", typeof data);
             for(i=0; i < data.length; i++) {
                 list.push(data[i][type]);
             }; 
-            console.log("la liste de directeur = ", list);
+            //console.log("la liste de directeur = ", list);
             return list;
         })
         .catch(error => console.log("There is an error", error))
@@ -25,6 +25,7 @@ fetchList("movie_title").then(function(list) {console.log("liste de réalisateur
 
 
 /* ---- searchahead (twitter plugin) ---- */
+
 
 var substringMatcher = function(strs) {
   return function findMatches(q, cb) {
@@ -48,19 +49,25 @@ var substringMatcher = function(strs) {
   };
 };
 
+
+
 //const moviesTitleList = ["love", "shape"];
-//const moviesTitleList = fetchList("movie_title").then(function(list) {return list});
+function moviesTitleList () {  
+  fetchList("movie_title")
+    .then(function(list) { 
+      $('#the-basics .typeahead').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+      },
+      {
+        name: 'moviesTitleList',
+        source: substringMatcher(list)
+      });
+    })
+}
 
-
-$('#the-basics .typeahead').typeahead({
-  hint: true,
-  highlight: true,
-  minLength: 1
-},
-{
-  name: 'moviesTitleList',
-  source: fetchList("movie_title").then(function(list) {substringMatcher(list)})
-});
+moviesTitleList();
 
 /*
 var countries = new Bloodhound({
