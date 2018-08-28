@@ -66,7 +66,7 @@ function advance() {
 
 /* ---- button for sliders ---- */
 $.each($SLIDES, function(index) {
-    const $button = $('<button type="button" class="slide-btn">&bull;</button>'); // création d'un élément boutton
+    const $button = $('<button type="button" class="slide-btn">&bull;</button>'); // création d'un élément boutton 
     if (index === currentIndex) { // si la slide est l'active
         $button.addClass("active"); // ajouter la class active pour la maintenir
     }
