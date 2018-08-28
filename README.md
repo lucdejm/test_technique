@@ -1,16 +1,21 @@
 # test_technique
 
 ## Intergration
-
-* Gestion en vue Node.js
+HTML & CSS
 * Approche Mobile first (juste large et mobile)
-* Utilisation 'fetch' pour peupler la liste de films
+* utlisation de flexbox
+
+Node
+* Templatisation du sit en PUG
+
+JS
+* Diaporama
+* Gestion de l'autocompletion search avec le plugin searchahead
+* fetch pour la génération d'une liste de film randomisés (ne prend pas en compte les doublons)
 
 ## Middleware
-
-Node.js
-* route vers data
+Node
+* Gestion des routes
 
 ## Backoffice
-
 Utilisation d'un fichier data
